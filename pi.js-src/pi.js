@@ -1,4 +1,4 @@
-/*𝓟𝓲.𝑗𝑠 (Under development)*/
+/*𝓟𝓲.𝑗𝑠 source code (Under development)*/
 
 window.pijs = {};
 
