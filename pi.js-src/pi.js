@@ -28,6 +28,7 @@ pijs.chat.clearOnMsg = (eventIndex) =>{
     MPP.client._events["a"].splice(eventIndex, 1);
 };
 
+
 /*piano*/
 pijs.piano = {};
 pijs.piano.pressKey = (noteKey, volume) =>{
@@ -38,7 +39,12 @@ pijs.piano.pressLocal = (noteKey, volume) =>{
     MPP.piano.play(noteKey, volume, MPP.client.getOwnParticipant(), 0);
 };
 
-pijs.piano.keys = MPP.piano.keys;
+Object.defineProperty(pijs.piano, "keys", {  
+  get: function(){
+         return MPP.piano.keys;
+  }
+});
+
 
 /*client*/
 pijs.client = {};
