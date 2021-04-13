@@ -2,9 +2,9 @@
 Custom userscript API for MPP. Licensed under MIT.
 
 ### How to install:
-Just put 𝓟𝓲.𝑗𝑠 [lightweight code](https://github.com/SuperPowerPlumber/pi.js/tree/main/pi.js-light/pi.js) to your userscript code (or browser console).\
+Just put 𝓟𝓲.𝑗𝑠 [minified code](https://github.com/SuperPowerPlumber/pi.js/tree/main/pi.js-min/pi.js) to your userscript code (or browser console).\
 \
-Source code (if you don't want one-line lightweight code): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber/pi.js/tree/main/pi.js-src/pi.js)
+Source code (Unminified): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber/pi.js/tree/main/pi.js-src/pi.js)
 
 ## Documentation
 ### pijs.chat
