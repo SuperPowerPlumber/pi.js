@@ -4,8 +4,35 @@ window.pijs = {};
 
 /*chat*/
 pijs.chat = {};
-pijs.chat.send = (message) =>{
-    MPP.client.sendArray([{m:"a", message: message}]);
+pijs.chat.send = (message) => {
+    function sendFromBuffer() {
+
+        if (pijs.chat.buffer.length === 0) return;
+
+        pijs.chat.recentMessagesCount++;
+
+        MPP.client.sendArray([{
+            m: "a",
+            message: pijs.chat.buffer[0]
+        }]);
+
+        pijs.chat.buffer.shift();
+
+        setTimeout(() => {
+            pijs.chat.recentMessagesCount--;
+            
+            sendFromBuffer();
+        }, MPP.client.isOwner() ? 2500 : 6500);
+    };
+
+    pijs.chat.buffer.push(message);
+    if (pijs.chat.recentMessagesCount < (MPP.client.isOwner() ? 10 : 4)) sendFromBuffer();
+};
+
+pijs.chat.recentMessagesCount = 0;
+pijs.chat.buffer = [];
+pijs.chat.clearBuffer = () =>{
+    pijs.chat.buffer = [];
 };
 
 pijs.chat.local = (message, color) =>{
@@ -22,6 +49,10 @@ pijs.chat.setOnMsg = (func) =>{
     MPP.client.on("a", func);
     var chatEvents = MPP.client._events["a"];
     return chatEvents[chatEvents.length - 1];
+};
+
+pijs.chat.clearOnMsg = (eventIndex) =>{
+    MPP.client._events["a"].splice(eventIndex, 1);
 };
 
 pijs.chat.clearOnMsg = (eventIndex) =>{
