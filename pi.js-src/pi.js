@@ -84,9 +84,9 @@ getter(pijs.piano, "keys", () =>{
 
 /*client*/
 pijs.client = {};
-pijs.client.sendArray = (arrayType, objArray) =>{
-    var sendArrayArgs = {m:arrayType};
-    Object.assign(sendArrayArgs, objArray);
+pijs.client.sendArray = (messageType, clientMsg) =>{
+    var sendArrayArgs = {m:messageType};
+    Object.assign(sendArrayArgs, clientMsg);
     MPP.client.sendArray([sendArrayArgs]);
 };
 
