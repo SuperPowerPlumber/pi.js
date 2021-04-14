@@ -2,11 +2,11 @@
 
 window.pijs = {};
 var getter = (obj, prop, func) =>{
-	Object.defineProperty(obj, prop, { get: func });
+    Object.defineProperty(obj, prop, { get: func });
 };
 
 var setter = (obj, prop, func) =>{
-	Object.defineProperty(obj, prop, { set: func });
+    Object.defineProperty(obj, prop, { set: func });
 };
 
 /*chat*/
