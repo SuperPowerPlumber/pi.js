@@ -8,7 +8,7 @@ Source code (Unminified): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber
 
 # Documentation
 
-## Chat Functions
+## **Chat** Property
 
 ### Sending Messages
 
@@ -52,7 +52,7 @@ pijs.chat.clearOnMsg(eventIndex);
 
 Clears a onMsg event. (Requires event index).
 
-## Piano Functions
+## **Piano** Property
 
 ### Playing a Note
 
