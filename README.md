@@ -53,7 +53,7 @@ Clears a onMsg event. (Requires event listener).
 See [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
 
 
-## **Piano** Property
+## `piano` Property
 
 ### Playing a Note
 
