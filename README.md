@@ -18,7 +18,7 @@ pijs.chat.send(message);
 
 This function will send a message to everyone in the channel. Influenced by chat buffer.
 
-### Logging Local Messages (for your eyes only!)
+### Logging local messages (for your eyes only!)
 
 ```js
 pijs.chat.local(String message, String color);
@@ -34,7 +34,7 @@ pijs.chat.setPlayerChatOutput(Function cb());
 
 Using this you can change the message output function which executes after pressing enter key when you send message.
 
-### Adding a Chat Listener
+### Adding a chat listener
 
 ```js
 #### pijs.chat.setOnMsg(func);
@@ -46,7 +46,7 @@ Sets an event listener that executes each time anyone sends a chat message. Also
 pijs.chat.clearOnMsg(eventIndex);
 ```
 
-Clears a onMsg event. (Requires event listener).
+Clears a onMsg event. (Requires event index).
 
 ### Structure of Incoming Messages (`sendArray`)
 
@@ -55,7 +55,7 @@ See [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
 
 ## `piano` property
 
-### Playing a Note
+### Playing a note
 
 ```js
 pijs.piano.pressKey(noteKey, volume);
@@ -63,7 +63,7 @@ pijs.piano.pressKey(noteKey, volume);
 
 This function will "press" a note on the piano, which everyone can hear.
 
-### Playing a Local Note (for your ears only!)
+### Playing a local note (for your ears only!)
 
 ```js
 pijs.piano.pressLocal(noteKey, volume);
@@ -71,10 +71,15 @@ pijs.piano.pressLocal(noteKey, volume);
 
 Same as, pijs.piano.pressKey, but only you hear your notes.
 
-### Extracting Piano Key Data
+### Extracting piano key data
 
 ```js
 pijs.piano.keys
 ```
 
 Returns a list with all piano keys codes.
+
+
+## `client` property
+
+### Send message to the server
