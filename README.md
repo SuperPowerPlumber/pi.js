@@ -8,7 +8,7 @@ Source code (Unminified): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber
 
 # Documentation
 ## `chat` property
-### Sending Messages
+### Sending messages
 ```js
 pijs.chat.send(message);
 ```
@@ -30,7 +30,8 @@ Using this you can change the message output function which executes after press
 ```js
 pijs.chat.setOnMsg(Function func);
 ```
-Sets an event listener that executes each time anyone sends a chat message. Also returns the index of the event created using `setOnMsg`.\
+Sets an event listener that executes each time anyone sends a chat message. Also returns the index of the event created using `setOnMsg`.
+#### Removing a chat listener
 ```js
 pijs.chat.clearOnMsg(eventIndex);
 ```
@@ -41,7 +42,7 @@ Clears a onMsg event. (Requires event index).
 ```js
 pijs.piano.pressKey(noteKey, volume);
 ```
-This function will "press" a note on the piano, which everyone can hear.
+This function will "press" a key on the piano, which everyone can hear.
 
 ### Playing a local note (for your ears only!)
 ```js
