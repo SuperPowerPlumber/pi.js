@@ -66,7 +66,7 @@ pijs.client.sendArray(String messageType, Object clientMsg);
 Each message (not confused with chat message) sended using sendArray is an object (`[{}]`) in which the parameter "m" is message type, and other parameters depending on the type of the message (ex. parameter "color"). Seeing the type, the server understands what the person wanted to do.\
 \
 Example:\
-MPP's built-in `MPP.client.sendArray`
+MPP's built-in sendArray
 ```js
 MPP.client.sendArray([{"m":"chown","id":"0123456789abcdef01234567"}]);
 ```
