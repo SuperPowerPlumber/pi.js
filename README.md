@@ -69,7 +69,7 @@ Example:
 ```js
 MPP.client.sendArray([{"m":"chown","id":"0123456789abcdef01234567"}]);
 ```
-or more simplified
+or more simplified `pijs.client.sendArray`
 ```js
 pijs.client.sendArray("chown", {"id":"0123456789abcdef01234567"});
 ```
