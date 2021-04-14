@@ -16,7 +16,7 @@ Source code (Unminified): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber
 pijs.chat.send(message);
 ```
 
-This function will send a message to everyone in the channel.
+This function will send a message to everyone in the channel. Influenced by chat buffer.
 
 ### Logging Local Messages (for your eyes only!)
 
