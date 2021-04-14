@@ -1,5 +1,5 @@
 # 𝓟𝓲.𝑗𝑠 API (Under development)
-Custom userscript API for MPP. Licensed under MIT.
+Custom userscript API for [MPP](https://multiplayerpiano.com). Licensed under MIT.
 
 ### How to install:
 Just put 𝓟𝓲.𝑗𝑠 [minified code](https://raw.githubusercontent.com/SuperPowerPlumber/pi.js/main/pi.js-min/pi.min.js) to your userscript code (or browser console).\
