@@ -85,3 +85,5 @@ Returns a list with all piano keys codes.
 ```js
 pijs.client.sendArray(String messageType, Object clientMsg);
 ```
+
+Each message (not confused with chat message) sended using sendArray has specified type. Seeing the type, the server understands what the person wanted to do.
