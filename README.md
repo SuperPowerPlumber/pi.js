@@ -63,9 +63,9 @@ Returns a list with all piano keys codes.
 pijs.client.sendArray(String messageType, Object clientMsg);
 ```
 Each message (not confused with chat message) sended using `MPP.client.sendArray` is an object (`[{}]`) in which the parameter "m" is specified, which determines the type, and other parameters depending on the type of the message (ex. parameter "color"). Seeing the type, the server understands what the person wanted to do.\
-Example: 
+Example:
 ```js
-Test
+MPP.client.sendArray({"m":"chown","id":"0123456789abcdef01234567"});
 ```
-with message type "chown" and parameter "id" gives crown to play with temp id "0123456789abcdef01234567".
+That script with message type "chown" and parameter "id" gives crown to play with temp id "0123456789abcdef01234567".\
 You can learn about message types and how to use them [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
