@@ -66,7 +66,7 @@ Each message (not confused with chat message) sended using sendArray is an objec
 \
 Example:
 ```js
-MPP.client.sendArray({"m":"chown","id":"0123456789abcdef01234567"});
+MPP.client.sendArray([{"m":"chown","id":"0123456789abcdef01234567"}]);
 ```
 or more simplified
 ```js
