@@ -40,17 +40,18 @@ Using this you can change the message output function which executes after press
 #### pijs.chat.setOnMsg(func);
 ```
 
-Sets an event listener that executes each time anyone sends a chat message. Also returns the index of the event created using `setOnMsg`.
-
-### Structure of Incoming Messages (`msg`)
-
-See [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
-
+Sets an event listener that executes each time anyone sends a chat message. Also returns the index of the event created using `setOnMsg`./
+/
 ```js
 pijs.chat.clearOnMsg(eventIndex);
 ```
 
 Clears a onMsg event. (Requires event index).
+
+### Structure of Incoming Messages (`sendArray`)
+
+See [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
+
 
 ## **Piano** Property
 
