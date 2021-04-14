@@ -1,6 +1,13 @@
-/*𝓟𝓲.𝑗𝑠 source code (Under development)*/
+/*𝓟𝓲.𝑗𝑠 API source code (Under development)*/
 
 window.pijs = {};
+var getter = (obj, prop, func) =>{
+	Object.defineProperty(obj, prop, { get: func });
+};
+
+var setter = (obj, prop, func) =>{
+	Object.defineProperty(obj, prop, { set: func });
+};
 
 /*chat*/
 pijs.chat = {};
@@ -9,7 +16,7 @@ pijs.chat.send = (message) => {
 
         if (pijs.chat.buffer.length === 0) return;
 
-        pijs.chat.recentMessagesCount++;
+        pijs.chat.bufferCount++;
 
         MPP.client.sendArray([{
             m: "a",
@@ -19,17 +26,17 @@ pijs.chat.send = (message) => {
         pijs.chat.buffer.shift();
 
         setTimeout(() => {
-            pijs.chat.recentMessagesCount--;
+            pijs.chat.bufferCount--;
             
             sendFromBuffer();
         }, MPP.client.isOwner() ? 2500 : 6500);
     };
 
     pijs.chat.buffer.push(message);
-    if (pijs.chat.recentMessagesCount < (MPP.client.isOwner() ? 10 : 4)) sendFromBuffer();
+    if (pijs.chat.bufferCount < (MPP.client.isOwner() ? 10 : 4)) sendFromBuffer();
 };
 
-pijs.chat.recentMessagesCount = 0;
+pijs.chat.bufferCount = 0;
 pijs.chat.buffer = [];
 pijs.chat.clearBuffer = () =>{
     pijs.chat.buffer = [];
@@ -70,10 +77,8 @@ pijs.piano.pressLocal = (noteKey, volume) =>{
     MPP.piano.play(noteKey, volume, MPP.client.getOwnParticipant(), 0);
 };
 
-Object.defineProperty(pijs.piano, "keys", {  
-  get: function(){
+getter(pijs.piano, "keys", () =>{
          return MPP.piano.keys;
-  }
 });
 
 
