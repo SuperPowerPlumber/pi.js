@@ -86,4 +86,4 @@ Returns a list with all piano keys codes.
 pijs.client.sendArray(String messageType, Object clientMsg);
 ```
 
-Each message (not confused with chat message) sended using `MPP.client.sendArray` is an object in which the property "m" is specified, which determines the type and others depending on the type of the property (ex. property "color"). Seeing the type, the server understands what the person wanted to do. 
+Each message (not confused with chat message) sended using `MPP.client.sendArray` is an object in which the property "m" is specified, which determines the type, and other properties depending on the type of the property (ex. property "color"). Seeing the type, the server understands what the person wanted to do. 
