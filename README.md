@@ -20,7 +20,7 @@ This function will send a message to everyone in the channel. Influenced by chat
 ### Logging local messages (for your eyes only!)
 
 ```js
-pijs.chat.local(String message, String color);
+pijs.chat.local(message, String color);
 ```
 
 Makes local customizable messages in chat which only you can see. Supports HTML. Not affected by chat buffer.
