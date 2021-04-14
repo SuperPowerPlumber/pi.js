@@ -8,7 +8,7 @@ Source code (Unminified): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber
 
 # Documentation
 
-## **Chat** Property
+## `chat` Property
 
 ### Sending Messages
 
