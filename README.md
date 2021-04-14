@@ -47,11 +47,6 @@ pijs.chat.clearOnMsg(eventIndex);
 
 Clears a onMsg event. (Requires event index).
 
-### Structure of Incoming Messages (`sendArray`)
-
-See [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
-
-
 ## `piano` property
 
 ### Playing a note
@@ -86,4 +81,5 @@ Returns a list with all piano keys codes.
 pijs.client.sendArray(String messageType, Object clientMsg);
 ```
 
-Each message (not confused with chat message) sended using `MPP.client.sendArray` is an object (`[{}]`) in which the parameter "m" is specified, which determines the type, and other parameters depending on the type of the message (ex. parameter "color"). Seeing the type, the server understands what the person wanted to do. 
+Each message (not confused with chat message) sended using `MPP.client.sendArray` is an object (`[{}]`) in which the parameter "m" is specified, which determines the type, and other parameters depending on the type of the message (ex. parameter "color"). Seeing the type, the server understands what the person wanted to do./
+You can learn about message types and how to use them [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
