@@ -40,8 +40,8 @@ Using this you can change the message output function which executes after press
 #### pijs.chat.setOnMsg(func);
 ```
 
-Sets an event listener that executes each time anyone sends a chat message. Also returns the index of the event created using `setOnMsg`./
-/
+Sets an event listener that executes each time anyone sends a chat message. Also returns the index of the event created using `setOnMsg`.\
+\
 ```js
 pijs.chat.clearOnMsg(eventIndex);
 ```
