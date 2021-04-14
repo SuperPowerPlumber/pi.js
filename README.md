@@ -8,7 +8,7 @@ Source code (Unminified): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber
 
 # Documentation
 
-## `chat` Property
+## `chat` property
 
 ### Sending Messages
 
@@ -53,7 +53,7 @@ Clears a onMsg event. (Requires event listener).
 See [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
 
 
-## `piano` Property
+## `piano` property
 
 ### Playing a Note
 
