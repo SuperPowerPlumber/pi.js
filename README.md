@@ -46,7 +46,7 @@ Sets an event listener that executes each time anyone sends a chat message. Also
 pijs.chat.clearOnMsg(eventIndex);
 ```
 
-Clears a onMsg event. (Requires event index).
+Clears a onMsg event. (Requires event listener).
 
 ### Structure of Incoming Messages (`sendArray`)
 
