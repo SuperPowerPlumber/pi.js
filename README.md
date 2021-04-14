@@ -7,7 +7,6 @@ Just put 𝓟𝓲.𝑗𝑠 [minified code](https://raw.githubusercontent.com/Sup
 Source code (Unminified): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber/pi.js/tree/main/pi.js-src/pi.js)
 
 # Documentation
-
 ## `chat` property
 
 ### Sending Messages
@@ -29,7 +28,7 @@ Makes local customizable messages in chat which only you can see. Supports HTML.
 ### Changing how you chat
 
 ```js
-pijs.chat.setPlayerChatOutput(Function cb());
+pijs.chat.setPlayerChatOutput(Function func);
 ```
 
 Using this you can change the message output function which executes after pressing enter key when you send message.
@@ -37,7 +36,7 @@ Using this you can change the message output function which executes after press
 ### Adding a chat listener
 
 ```js
-#### pijs.chat.setOnMsg(func);
+#### pijs.chat.setOnMsg(Function func);
 ```
 
 Sets an event listener that executes each time anyone sends a chat message. Also returns the index of the event created using `setOnMsg`.\
@@ -82,4 +81,5 @@ Returns a list with all piano keys codes.
 
 ## `client` property
 
-### Send message to the server
+### Sending messages to the server
+```pijs.client.sendArray(String messageType, Object clientMsg);```
