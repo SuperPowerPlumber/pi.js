@@ -82,4 +82,5 @@ Returns a list with all piano keys codes.
 ## `client` property
 
 ### Sending messages to the server
-```pijs.client.sendArray(String messageType, Object clientMsg);```
+```js
+pijs.client.sendArray(String messageType, Object clientMsg);```
