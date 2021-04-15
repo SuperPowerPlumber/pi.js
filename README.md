@@ -79,5 +79,5 @@ with message type "chown" and parameter "id" gives crown to player with temp id 
 You can learn about message types and how to use them [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
 
 ## `player` property
-### `pijs.player.name
+### `pijs.player.name`
 Returns your name.
