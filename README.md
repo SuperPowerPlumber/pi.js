@@ -80,7 +80,7 @@ You can learn about message types and how to use them [here](https://github.com/
 
 ## `player` property
 ### `pijs.player.name`
-Returns your name.
+Returns your player name.
 ### `pijs.player.color`
 Returns your color. Depends on your _id.
 ### `pijs.player._id`
