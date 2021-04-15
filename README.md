@@ -84,4 +84,4 @@ Returns your name.
 ### `pijs.player._id`
 Your player identifier. Depends on your IP address.
 ### `pijs.player.id`
-Your temporary identifier.
+Your temporary identifier. Changes after each rejoining the gane.
