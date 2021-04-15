@@ -88,4 +88,7 @@ Your player identifier. Depends on your IP address.
 ### `pijs.player.id`
 Your temporary identifier. Changes after each rejoining the game.
 ### Setting your name.
-```pijs.player.setName(name);```
+```js
+pijs.player.setName(nickname);
+```
+Changes your player name.
