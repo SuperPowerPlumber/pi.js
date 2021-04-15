@@ -83,11 +83,12 @@ Returns a list of all players in the room where you are. Each player on the list
 * _id
 * id
 * x
-* y
+* y\
+\
 ```js
 pijs.players[String _id]
 ```
-To get info about specified player, you need to use his/her _id.\
+To get info about specified player, you need to use his/her _id.
 
 ## `client` property
 ### Sending messages to the server
