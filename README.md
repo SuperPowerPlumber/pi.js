@@ -77,7 +77,7 @@ pijs.player.setName(nickname);
 Changes your player name. Maximum player name length is 40 characters.
 
 ## `players` property
-Returns a list of all players in the room where you are. You can use _id to get info about player./
+Returns a list of all players in the room where you are. You can use _id to get info about player.\
 Each player on the list contains this data:
 ```js
 pijs.player[String _id].name
