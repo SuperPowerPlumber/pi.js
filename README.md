@@ -58,17 +58,17 @@ pijs.piano.keys
 Returns a list with all piano keys codes.
 
 ## `player` property
-### `pijs.player.name`
+### pijs.player.name
 Returns your player name.
-### `pijs.player.color`
+### pijs.player.color
 Returns your color in hexadecimal format. Depends on your _id.
-### `pijs.player._id`
+### pijs.player._id
 Your player identifier. Depends on your IP address.
-### `pijs.player.id`
+### pijs.player.id
 Your temporary identifier. Changes after each rejoining the game.
-### `pijs.player.x`
+### pijs.player.x
 Returns your cursor position on x-axis.
-### `pijs.player.y`
+### pijs.player.y
 Returns your cursor position on y-axis.
 ### Setting your name.
 ```js
