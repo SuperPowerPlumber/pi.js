@@ -70,7 +70,7 @@ Your temporary identifier. Changes after each rejoining the game.
 Returns your cursor position on x-axis.
 ### pijs.player.y
 Returns your cursor position on y-axis.
-### Setting your name.
+### Setting your name
 ```js
 pijs.player.setName(nickname);
 ```
