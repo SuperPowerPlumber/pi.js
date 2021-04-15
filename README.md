@@ -74,7 +74,7 @@ Returns your cursor position on y-axis.
 ```js
 pijs.player.setName(nickname);
 ```
-Changes your player name. Maximum name length is 40 characters.
+Sets your player name. Maximum name length is 40 characters.
 
 ## `players` property
 Returns a list of all players in the room where you are. Each player on a list contains these properties:
