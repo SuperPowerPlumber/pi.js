@@ -83,5 +83,5 @@ You can learn about message types and how to use them [here](https://github.com/
 Returns your name.
 ### `pijs.player._id`
 Your player identifier. Depends on your IP address.
-### `pijs.player.id
+### `pijs.player.id`
 Your temporary identifier.
