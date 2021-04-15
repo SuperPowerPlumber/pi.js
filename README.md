@@ -77,3 +77,5 @@ pijs.client.sendArray("chown", {"id":"0123456789abcdef01234567"});
 with message type "chown" and parameter "id" gives crown to player with temp id "0123456789abcdef01234567".\
 \
 You can learn about message types and how to use them [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
+
+#`player` property
