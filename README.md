@@ -76,6 +76,8 @@ pijs.player.setName(nickname);
 ```
 Changes your player name. Maximum player name length is 40 characters.
 
+## `players` property
+
 ## `client` property
 ### Sending messages to the server
 ```js
