@@ -78,25 +78,13 @@ Changes your player name. Maximum player name length is 40 characters.
 
 ## `players` property
 Returns a list of all players in the room where you are. You can use his/her _id to get info about specified player.\
-Each player on the list contains this data:
-```js
-pijs.player[String _id].name
-```
-```js
-pijs.player[String _id].color
-```
-```js
-pijs.player[String _id]._id
-```
-```js
-pijs.player[String _id].id
-```
-```js
-pijs.player[String _id].x
-```
-```js
-pijs.player[String _id].y
-```
+Each player on the list contains this properties:
+* name
+* color
+* _id
+* id
+* x
+* y
 
 ## `client` property
 ### Sending messages to the server
