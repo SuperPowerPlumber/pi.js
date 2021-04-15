@@ -84,6 +84,7 @@ getter(pijs.piano, "keys", () =>{
 /*player*/
 getter(pijs, "player", ()=>{
     var player = MPP.client.getOwnParticipant();
+    delete player.nameDiv;
     player.setName = (nickname) => {
         MPP.client.sendArray([{"m":"userset","set":{"name":nickname}}]);
     };
@@ -96,6 +97,7 @@ getter(pijs, "players", ()=>{
     var players = {};
     Object.values(MPP.client.ppl).forEach(function(player){
         players[player._id] = player;
+        delete players[player._id].nameDiv;
     });
     return players;
 });
