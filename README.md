@@ -91,4 +91,4 @@ Your temporary identifier. Changes after each rejoining the game.
 ```js
 pijs.player.setName(nickname);
 ```
-Changes your player name. Maximum nickname length is 50 characters.
+Changes your player name. Maximum player name length is 40 characters.
