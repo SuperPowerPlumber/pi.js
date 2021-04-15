@@ -81,3 +81,4 @@ You can learn about message types and how to use them [here](https://github.com/
 ## `player` property
 ### `pijs.player.name`
 Returns your name.
+### `pijs.player._id`
