@@ -33,7 +33,7 @@ pijs.chat.setOnMsg(Function func);
 Sets an event listener that executes each time anyone sends a chat message. Also returns the index of the event created using `setOnMsg`.
 #### Removing a chat event listener
 ```js
-pijs.chat.clearOnMsg(eventIndex);
+pijs.chat.clearOnMsg(Integer eventIndex);
 ```
 Clears a onMsg event. (Requires event index).
 
