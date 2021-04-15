@@ -81,20 +81,6 @@ getter(pijs.piano, "keys", () =>{
     return MPP.piano.keys;
 });
 
-
-/*client*/
-pijs.client = {};
-pijs.client.sendArray = (messageType, clientMsg) =>{
-    var sendArrayArgs = {m:messageType};
-    Object.assign(sendArrayArgs, clientMsg);
-    MPP.client.sendArray([sendArrayArgs]);
-};
-
-pijs.client.on = (eventType, eventFunc) =>{
-    MPP.client.on(eventType, eventFunc);
-};
-
-
 /*player*/
 getter(pijs, "player", ()=>{
     var player = MPP.client.getOwnParticipant();
@@ -113,3 +99,16 @@ getter(pijs, "players", ()=>{
     });
     return players;
 });
+
+
+/*client*/
+pijs.client = {};
+pijs.client.sendArray = (messageType, clientMsg) =>{
+    var sendArrayArgs = {m:messageType};
+    Object.assign(sendArrayArgs, clientMsg);
+    MPP.client.sendArray([sendArrayArgs]);
+};
+
+pijs.client.on = (eventType, eventFunc) =>{
+    MPP.client.on(eventType, eventFunc);
+};
