@@ -81,6 +81,7 @@ You can learn about message types and how to use them [here](https://github.com/
 ## `player` property
 ### `pijs.player.name`
 Returns your name.
+### `pijs.player.color
 ### `pijs.player._id`
 Your player identifier. Depends on your IP address.
 ### `pijs.player.id`
