@@ -86,7 +86,7 @@ Returns a list of all players in the room where you are. Each player on the list
 * y
 
 ```js
-pijs.players[String _id]
+pijs.players[String _id];
 ```
 To get properties of the player, you need to use his/her _id.
 
