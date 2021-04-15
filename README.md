@@ -57,6 +57,20 @@ pijs.piano.keys
 ```
 Returns a list with all piano keys codes.
 
+## `player` property
+### `pijs.player.name`
+Returns your player name.
+### `pijs.player.color`
+Returns your color in hexadecimal format. Depends on your _id.
+### `pijs.player._id`
+Your player identifier. Depends on your IP address.
+### `pijs.player.id`
+Your temporary identifier. Changes after each rejoining the game.
+### Setting your name.
+```js
+pijs.player.setName(nickname);
+```
+Changes your player name. Maximum player name length is 40 characters.
 
 ## `client` property
 ### Sending messages to the server
@@ -77,18 +91,3 @@ pijs.client.sendArray("chown", {"id":"0123456789abcdef01234567"});
 with message type "chown" and parameter "id" gives crown to player with temp id "0123456789abcdef01234567".\
 \
 You can learn about message types and how to use them [here](https://github.com/aeiou879/mppdocumentation/blob/main/allmessages).
-
-## `player` property
-### `pijs.player.name`
-Returns your player name.
-### `pijs.player.color`
-Returns your color in hexadecimal format. Depends on your _id.
-### `pijs.player._id`
-Your player identifier. Depends on your IP address.
-### `pijs.player.id`
-Your temporary identifier. Changes after each rejoining the game.
-### Setting your name.
-```js
-pijs.player.setName(nickname);
-```
-Changes your player name. Maximum player name length is 40 characters.
