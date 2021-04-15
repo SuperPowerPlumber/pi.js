@@ -82,7 +82,7 @@ You can learn about message types and how to use them [here](https://github.com/
 ### `pijs.player.name`
 Returns your player name.
 ### `pijs.player.color`
-Returns your color. Depends on your _id.
+Returns your color in hexadecimal format. Depends on your _id.
 ### `pijs.player._id`
 Your player identifier. Depends on your IP address.
 ### `pijs.player.id`
