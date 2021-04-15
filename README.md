@@ -86,4 +86,5 @@ Returns your color in hexadecimal format. Depends on your _id.
 ### `pijs.player._id`
 Your player identifier. Depends on your IP address.
 ### `pijs.player.id`
-Your temporary identifier. Changes after each rejoining the gane.
+Your temporary identifier. Changes after each rejoining the game.
+### Changing your name.
