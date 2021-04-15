@@ -95,9 +95,10 @@ getter(pijs, "player", ()=>{
 /*players*/
 getter(pijs, "players", ()=>{
     var players = {};
-    Object.values(MPP.client.ppl).forEach(function(player){
+    Object.values(MPP.client.ppl).map(function(player){
         players[player._id] = player;
         delete players[player._id].nameDiv;
+        delete players[player._id].cursorDiv;
     });
     return players;
 });
