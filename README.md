@@ -84,7 +84,7 @@ Returns a list of all players in the room where you are. Each player on the list
 * id
 * x
 * y
-\
+
 ```js
 pijs.players[String _id]
 ```
