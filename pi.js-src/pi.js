@@ -78,7 +78,7 @@ pijs.piano.pressLocal = (noteKey, volume) =>{
 };
 
 getter(pijs.piano, "keys", () =>{
-         return MPP.piano.keys;
+    return MPP.piano.keys;
 });
 
 
@@ -93,3 +93,23 @@ pijs.client.sendArray = (messageType, clientMsg) =>{
 pijs.client.on = (eventType, eventFunc) =>{
     MPP.client.on(eventType, eventFunc);
 };
+
+
+/*player*/
+getter(pijs, "player", ()=>{
+    var player = MPP.client.getOwnParticipant();
+    player.setName = (nickname) => {
+        MPP.client.sendArray([{"m":"userset","set":{"name":nickname}}]);
+    };
+    return player;
+});
+
+
+/*players*/
+getter(pijs, "players", ()=>{
+    var players = {};
+    Object.values(MPP.client.ppl).forEach(function(player){
+        players[player._id] = player;
+    });
+    return players;
+});
