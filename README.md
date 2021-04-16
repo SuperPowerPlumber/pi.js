@@ -40,13 +40,13 @@ Clears a onMsg event. (Requires event index).
 ## `piano` property
 ### Playing a note
 ```js
-pijs.piano.pressKey(noteKey, volume);
+pijs.piano.pressKey(String noteKey, volume);
 ```
 This function will "press" a key on the piano, which everyone can hear.
 
 ### Playing a local note (for your ears only!)
 ```js
-pijs.piano.pressLocal(noteKey, volume);
+pijs.piano.pressLocal(String noteKey, volume);
 ```
 Same as, pijs.piano.pressKey, but only you hear your notes.
 
