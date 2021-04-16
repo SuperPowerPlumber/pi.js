@@ -80,9 +80,9 @@ pijs.piano.pressLocal = (noteKey, volume) =>{
     MPP.piano._play(noteKey, volume, MPP.client.getOwnParticipant(), 0);
 };
 
-pijs.piano.pianoOutput = typeof pijs.piano.pianoOutput === "undefined" ? (noteKey, volume) =>{
+pijs.piano.pianoOutput = pijs.piano.pianoOutput || function (noteKey, volume){
     pijs.piano.pressKey(noteKey, volume);
-} : pijs.piano.pianoOutput;
+};
 
 pijs.piano.setPlayerPianoOutput = (func) =>{
     pijs.piano.pianoOutput = func;
