@@ -59,10 +59,6 @@ pijs.chat.clearOnMsg = (eventIndex) =>{
     MPP.client._events["a"].splice(eventIndex, 1);
 };
 
-pijs.chat.clearOnMsg = (eventIndex) =>{
-    MPP.client._events["a"].splice(eventIndex, 1);
-};
-
 
 /*piano*/
 pijs.piano = {};
