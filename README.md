@@ -50,8 +50,13 @@ pijs.piano.pressLocal(noteKey, volume);
 ```
 Same as, pijs.piano.pressKey, but only you hear your notes.
 
-### Extracting piano key data
+### Changing how you play on a piano
+```js
+pijs.piano.setPianoChatOutput(Function func);
+```
+Using this you can change the note play function which executes after each your piano note play.
 
+### Extracting piano key data
 ```js
 pijs.piano.keys
 ```
