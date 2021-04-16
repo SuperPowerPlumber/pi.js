@@ -11,7 +11,7 @@ let pijs_api_script = document.createElement('script');
 pijs_api_script.src = 'https://cdn.jsdelivr.net/gh/SuperPowerPlumber/pi.js/pi.js-min/pi.min.js';
 document.body.appendChild(pijs_api_script);
 
-sleep(5000)
+sleep(5000);
 /*Your script here*/
 ```
 \
