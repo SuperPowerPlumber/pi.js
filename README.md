@@ -10,8 +10,7 @@ let pijs_api = document.createElement('script');
 pijs_api.src = 'https://cdn.jsdelivr.net/gh/SuperPowerPlumber/pi.js/pi.js-min/pi.min.js';
 document.body.appendChild(pijs_api);
 ```
-
-```
+/
 Source code (Unminified): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber/pi.js/tree/main/pi.js-src/pi.js)
 
 # Documentation
