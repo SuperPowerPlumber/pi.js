@@ -52,7 +52,7 @@ Same as, pijs.piano.pressKey, but only you hear your notes.
 
 ### Changing how you play on a piano
 ```js
-pijs.piano.setPianoChatOutput(Function func);
+pijs.piano.setPlayerPianoOutput(Function func);
 ```
 Using this you can change the note play function which executes after each your piano note play.
 
