@@ -70,16 +70,47 @@ pijs.chat.clearOnMsg = (eventIndex) =>{
 /*piano*/
 pijs.piano = {};
 pijs.piano.pressKey = (noteKey, volume) =>{
-    MPP.press(noteKey, volume);
+    MPP.client.startNote(noteKey, volume);
+    MPP.piano._play(noteKey, volume, MPP.client.getOwnParticipant(), 0);
 };
 
+MPP.press = pijs.piano.pressKey;
+
 pijs.piano.pressLocal = (noteKey, volume) =>{
-    MPP.piano.play(noteKey, volume, MPP.client.getOwnParticipant(), 0);
+    MPP.piano._play(noteKey, volume, MPP.client.getOwnParticipant(), 0);
+};
+
+pijs.piano.pianoOutput = typeof pijs.piano.pianoOutput === "undefined" ? (noteKey, volume) =>{
+    pijs.piano.pressKey(noteKey, volume);
+} : pijs.piano.pianoOutput;
+
+pijs.piano.setPlayerPianoOutput = (func) =>{
+    pijs.piano.pianoOutput = func;
 };
 
 getter(pijs.piano, "keys", () =>{
     return MPP.piano.keys;
 });
+
+
+/*Makes player piano output work*/
+if (typeof MPP.piano._play === "undefined" && typeof MPP.piano._stop === "undefined") {
+    MPP.piano._play = MPP.piano.play;
+    MPP.piano._stop = MPP.piano.stop;
+
+    MPP.piano.play = (note, vol, participant, delay_ms) => {
+        if (participant == MPP.client.getOwnParticipant()) {
+            pijs.piano.pianoOutput(note, vol);
+            pijs.piano.pressKey(noteKey, volume);
+        } else if (participant !== MPP.client.getOwnParticipant()) {
+            MPP.piano._play(note, vol, participant, delay_ms)
+        };
+    };
+
+    MPP.piano.stop = (note, participant, delay_ms) => {
+        MPP.piano._stop(note, participant, delay_ms);
+    };
+}
 
 
 /*player*/
