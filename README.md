@@ -6,6 +6,8 @@ Just put 𝓟𝓲.𝑗𝑠 [minified code](https://raw.githubusercontent.com/Sup
 \
 Or try that:
 ```js
+var sleep=sleep||function(e){for(var t=(new Date).getTime();(new Date).getTime()<t+e;);};
+
 /*𝓟𝓲.𝑗𝑠 API*/
 let pijs_api_script = document.createElement('script');
 pijs_api_script.src = 'https://cdn.jsdelivr.net/gh/SuperPowerPlumber/pi.js/pi.js-min/pi.min.js';
