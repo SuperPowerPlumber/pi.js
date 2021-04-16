@@ -6,9 +6,9 @@ Just put 𝓟𝓲.𝑗𝑠 [minified code](https://raw.githubusercontent.com/Sup
 Or try that:
 ```js
 /*𝓟𝓲.𝑗𝑠 API*/
-let pijs_api = document.createElement('script');
-pijs_api.src = 'https://cdn.jsdelivr.net/gh/SuperPowerPlumber/pi.js/pi.js-min/pi.min.js';
-document.body.appendChild(pijs_api);
+let pijs_api_script = document.createElement('script');
+pijs_api_script.src = 'https://cdn.jsdelivr.net/gh/SuperPowerPlumber/pi.js/pi.js-min/pi.min.js';
+document.body.appendChild(pijs_api_script);
 ```
 \
 Source code (Unminified): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber/pi.js/tree/main/pi.js-src/pi.js)
