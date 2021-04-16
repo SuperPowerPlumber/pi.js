@@ -10,6 +10,11 @@ Or try that:
 let pijs_api_script = document.createElement('script');
 pijs_api_script.src = 'https://cdn.jsdelivr.net/gh/SuperPowerPlumber/pi.js/pi.js-min/pi.min.js';
 document.body.appendChild(pijs_api_script);
+setTimeout(()=>{
+
+/*Your script here*/
+
+},5000);
 ```
 \
 Source code (Unminified): [pi.js-src/pi.js](https://github.com/SuperPowerPlumber/pi.js/tree/main/pi.js-src/pi.js)
