@@ -81,6 +81,7 @@ getter(pijs.piano, "keys", () =>{
     return MPP.piano.keys;
 });
 
+
 /*player*/
 getter(pijs, "player", ()=>{
     var player = MPP.client.getOwnParticipant();
