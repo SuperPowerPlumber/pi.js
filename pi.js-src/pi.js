@@ -91,22 +91,20 @@ getter(pijs.piano, "keys", () =>{
 
 
 /*Makes player piano output work*/
-if (typeof MPP.piano._play === "undefined" && typeof MPP.piano._stop === "undefined") {
-    MPP.piano._play = MPP.piano.play;
-    MPP.piano._stop = MPP.piano.stop;
+MPP.piano._play = MPP.piano._play || MPP.piano.play;
+MPP.piano._stop = MPP.piano._stop || MPP.piano.stop;
 
-    MPP.piano.play = (note, vol, participant, delay_ms) => {
-        if (participant == MPP.client.getOwnParticipant()) {
-            pijs.piano.pianoOutput(note, vol);
-        } else if (participant !== MPP.client.getOwnParticipant()) {
-            MPP.piano._play(note, vol, participant, delay_ms)
-        };
+MPP.piano.play = (note, vol, participant, delay_ms) => {
+    if (participant == MPP.client.getOwnParticipant()) {
+        pijs.piano.pianoOutput(note, vol);
+    } else if (participant !== MPP.client.getOwnParticipant()) {
+        MPP.piano._play(note, vol, participant, delay_ms)
     };
+};
 
-    MPP.piano.stop = (note, participant, delay_ms) => {
-        MPP.piano._stop(note, participant, delay_ms);
-    };
-}
+MPP.piano.stop = (note, participant, delay_ms) => {
+    MPP.piano._stop(note, participant, delay_ms);
+};
 
 
 /*player*/
