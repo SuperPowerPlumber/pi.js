@@ -3,7 +3,7 @@ Custom userscript API for [MPP](https://multiplayerpiano.com). Licensed under MI
 
 ### How to install:
 Just put 𝓟𝓲.𝑗𝑠 [minified code](https://raw.githubusercontent.com/SuperPowerPlumber/pi.js/main/pi.js-min/pi.min.js) to your userscript code (or browser console).\
-\
+Or try that:
 ```js
 https://cdn.jsdelivr.net/gh/SuperPowerPlumber/pi.js/pi.js-min/pi.min.js
 ```
