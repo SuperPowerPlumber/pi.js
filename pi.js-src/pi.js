@@ -13,26 +13,23 @@ var setter = (obj, prop, func) =>{
 pijs.chat = {};
 pijs.chat.send = (message) => {
     function sendFromBuffer() {
-
         if (pijs.chat.buffer.length === 0) return;
-
         pijs.chat.bufferCount++;
 
         MPP.client.sendArray([{
             m: "a",
             message: pijs.chat.buffer[0]
         }]);
-
         pijs.chat.buffer.shift();
 
-        setTimeout(() => {
+        setTimeout(() =>{
             pijs.chat.bufferCount--;
-            
             sendFromBuffer();
         }, MPP.client.isOwner() ? 2500 : 6500);
     };
 
     pijs.chat.buffer.push(message);
+    
     if (pijs.chat.bufferCount < (MPP.client.isOwner() ? 10 : 4)) sendFromBuffer();
 };
 
@@ -101,7 +98,6 @@ if (typeof MPP.piano._play === "undefined" && typeof MPP.piano._stop === "undefi
     MPP.piano.play = (note, vol, participant, delay_ms) => {
         if (participant == MPP.client.getOwnParticipant()) {
             pijs.piano.pianoOutput(note, vol);
-            pijs.piano.pressKey(noteKey, volume);
         } else if (participant !== MPP.client.getOwnParticipant()) {
             MPP.piano._play(note, vol, participant, delay_ms)
         };
