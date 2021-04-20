@@ -105,11 +105,19 @@ MPP.piano.stop = (note, participant, delay_ms) => {
 
 /*player*/
 getter(pijs, "player", ()=>{
-    var player = MPP.client.getOwnParticipant();
+    var player = Object.assign({}, MPP.client.getOwnParticipant());
     delete player.nameDiv;
+    
+    player.hasCrown = MPP.client.isOwner() || false;
+    
     player.setName = (nickname) => {
         MPP.client.sendArray([{"m":"userset","set":{"name":nickname}}]);
     };
+    
+    player.setColor  = (color) => {
+        MPP.client.sendArray([{"m":"userset","set":{"color":color}}]);
+    };
+    
     return player;
 });
 
@@ -118,7 +126,7 @@ getter(pijs, "player", ()=>{
 getter(pijs, "players", ()=>{
     var players = {};
     Object.values(MPP.client.ppl).map(function(player){
-        players[player._id] = player;
+        players[player._id] = Object.assign({}, player);
         delete players[player._id].nameDiv;
         delete players[player._id].cursorDiv;
     });
