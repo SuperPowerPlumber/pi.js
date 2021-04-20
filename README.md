@@ -83,12 +83,12 @@ Sets your player name. Maximum name length is 40 characters.
 
 ## `players` property
 Returns a list of all players in the room where you are. Each player on a list contains these properties:
-* name
-* color
-* _id
-* id
-* x
-* y
+* **name**
+* **color**
+* **_id**
+* **id**
+* **x**
+* **y**
 
 ```js
 pijs.players[String _id];
